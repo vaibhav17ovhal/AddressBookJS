@@ -30,56 +30,56 @@ class Contact {
         let first = RegExp('^[A-Z][a-z]{2,}$');
         if (first.test(firstName))
             this._firstName = firstName;
-        else throw "First name is not vaild";
+        else throw "Invalid First Name";
     }
     get lastName() { return this._lastName; }
     set lastName(lastName) {
         let first = RegExp('^[A-Z][a-z]{2,}$');
         if (first.test(firstName))
             this._lastName = lastName;
-        else throw "First name is not vaild";
+        else throw "Invalid Last Name";
     }
     get address() { return this._address; }
     set address(address) {
         let addr = RegExp('^[a-zA-Z]{4,}$');
         if (addr.test(address))
             this._address = address;
-        else throw "Address is not Valid";
+        else throw "Invalid Address";
     }
     get city() { return this._city; }
     set city(city) {
         let cit = RegExp('^[a-zA-Z]{4,}$');
         if (cit.test(city))
             this._city = city;
-        else throw "City is not Valid";
+        else throw "Invalid City";
     }
     get state() { return this._state; }
     set state(state) {
         let stat = RegExp('^[a-zA-Z]{4,}$');
         if (stat.test(state))
             this._state = state;
-        else throw "State is not Valid";
+        else throw "Invalid State";
     }
     get zip() { return this._zip; }
     set zip(zip) {
         let ZIP = RegExp('^[0-9]{3}[ ]+[0-9]{3}$');
         if (ZIP.test(zip))
             this._zip = zip;
-        else throw "ZIP is not valid";
+        else throw "Invalid Zip";
     }
     get phoneNumber() { return this._phoneNumber; }
     set phoneNumber(phoneNumber) {
         let phone = RegExp('^[0-9]{2}[ ]+[6-9][0-9]{9}$');
         if (phone.test(phoneNumber))
             this._phoneNumber = phoneNumber;
-        else throw "Phone number is Invalid";
+        else throw "Invalid Phone Number";
     }
     get email() { return this._email; }
     set email(email) {
         let mail = RegExp('^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}$');
         if (mail.test(email))
             this._email = email;
-        else throw "Email is Invalid";
+        else throw "Invalid Email";
     }
 
     toString() {
@@ -88,18 +88,18 @@ class Contact {
             + ", Email: " + this.email;
     }
 }
-let contact = new Contact(1, "Soma", "Shekar", "Mittur", "Kolar", "Karnataka", "563123", "9087123456", "soma@email.com");
+let contact = new Contact(1, "Vaibhav", "Ovhal", "Harsiddhi", "Indore", "M.P.", "452007", "9340596362", "vaibhavovhal15@gmail.com");
 console.log(contact.toString());
 
 let contactArray = new Array();
 try{
-    contact = new Contact(2,"Sanjana","Dhenge","Abcd","KoLhapur","Maharashtra","416012","9359923789","abc@gmail.com");
+    contact = new Contact(2,"Sameer","Joshi","Annapurna","Indore","M.P.","452009","9967989410","sameer123@gmail.com");
     contactArray.push(contact);
-    contact = new Contact(3,"Radha","Patil","Defg","KoLhapur","Maharashtra","416022","9359915712","xyz@gmail.com");
+    contact = new Contact(3,"Kartik","Sharma","Juni Indore","Indore","M.P.","452122","9874697488","kartik@gmail.com");
     contactArray.push(contact);
     console.log(contactArray);
 
-    let editName = "Sanjana";
+    let editName = "Sameer";
     for(let item of contactArray)
     {
         if(item._firstname==editName)
